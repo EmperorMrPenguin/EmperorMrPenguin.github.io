@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Počasí | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Počasí</div>
+            <button class="topButton hidden" data-func="" title=""><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <br>
+            <div class="contentText">
+                Počasí, které Vás bude dnes doprovázet.
+            </div>
+            <br>
+            <div class="pocasiBox">
+                <div class="pocasiIkona">
+                    <img src="icons/pocasi_polojasno.svg">
+                    <div class="pocasiTeplota">
+                        19 °C
+                    </div>
+                </div>
+                <div class="pocasiDodatek">
+                    Polojasno, dnes by nemělo pršet.
+                </div>
+            </div>
+            <br>
+            <div class="predpovedPocasi">
+                <div class="pocasiBunky">
+                    <div class="bunka styl_noc">
+                        <div class="hr">6</div>
+                        <img src="icons/pocasi_zatazeno.svg">
+                        <div class="temp">18°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">7:30</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">29°</div>
+                        <div class="pocasi-misto"><img src="icons/pointer_gray.svg">Výchozí bod</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">8</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">21°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">9</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">22°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">10</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">22°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">11</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">23°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">12:11</div>
+                        <img src="icons/pocasi_jasno.svg">
+                        <div class="temp">23°</div>
+                        <div class="pocasi-misto"><img src="icons/pointer_gray.svg">Brno</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">13</div>
+                        <img src="icons/pocasi_jasno.svg">
+                        <div class="temp">23°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">14</div>
+                        <img src="icons/pocasi_jasno.svg">
+                        <div class="temp">22°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">15</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">22°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">16</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">21°</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">17:06</div>
+                        <img src="icons/pocasi_zatazeno.svg">
+                        <div class="temp">18°</div>
+                        <div class="pocasi-misto"><img src="icons/pointer_gray.svg">Cíl</div>
+                    </div>
+
+                    <div class="bunka">
+                        <div class="hr">18</div>
+                        <img src="icons/pocasi_zatazeno.svg">
+                        <div class="temp">17°</div>
+                    </div>
+
+                    <div class="bunka styl_noc">
+                        <div class="hr">19</div>
+                        <img src="icons/pocasi_polojasno.svg">
+                        <div class="temp">17°</div>
+                    </div>
+
+                    <div class="bunka styl_noc">
+                        <div class="hr">20</div>
+                        <img src="icons/pocasi_zatazeno.svg">
+                        <div class="temp">15°</div>
+                    </div>
+                    <div class="bunkaEmpty"></div>
+
+                </div>
+                <div class="pocasiGraf">
+                    <img src="icons/POCASI_GRAF_EXAMPLE.png">
+                </div>
+            </div>
+
+            <div class="EMPTY"></div>
+        </div>
+
+        <div class="widgetBar">
+            <button class="widget wSelected" title="Počasí na trase" data-func="back">
+                <img src="icons/pocasi_polojasno.svg">
+                19°C
+            </button>
+            <button class="widget circle" title="Vybavení na trasu" data-func="misto_vybaveni">
+                <img src="icons/triko.svg">
+            </button>
+            <button class="widget" title="Spustit průvodce trasou">
+                  Start 
+                <img src="icons/startSipka.png">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

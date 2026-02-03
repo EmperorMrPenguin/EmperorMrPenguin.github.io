@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligentní asistent | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Inteligentní asistent</div>
+            <button class="topButton hidden" data-func="" title=""><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <div class="zpravy">
+                <div class="zprava_ai">
+                    Ahoj, rád Vás vidím! Jsem tu od toho, abych Vám pomohl, pokud nebudete vědět. S čím potřebujete poradit?
+                </div>
+            </div>
+            <div class="navrhy">
+                <button class="button buttonFix aiFx">🗺️ Tipy kam vyrazit</button>
+                <button class="button buttonFix aiFx">🎒 Doporučení vybavení</button>
+                <button class="button buttonFix aiFx">✍️ Napsat příspěvek</button>
+                <button class="button buttonFix aiFx">📍 Naplánovat trasu</button>
+            </div>
+        </div>
+
+        <div class="inputMessage">
+            <input type="text" placeholder="Napiště zprávu" class="messageField">
+            <button class="messageSend" data-func="ai_submitMessage"><img src="icons/odeslat.svg"></button>
+        </div>
+    </div>
+</body>
+</html>

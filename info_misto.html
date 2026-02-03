@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ještěd | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle hidden">Podrobnosti o místu</div>
+            <button class="topButton hidden"><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="content content-full">
+            <div class="mistoFotka">
+                <img src="icons/Ještěd.jpg" class="mistoFotkaObj">
+                <img src="icons/Ještěd.jpg" class="mistoFotkaObj YFlipped">
+            </div>
+            <div class="mistoContent">
+                <div class="mistoNazev">Ještěd</div>
+                <div class="mistoPopis">Ještěd je liberecká dominanta s unikátním televizním vysílačem a hotelem, který získal prestižní architektonickou cenu.</div>
+                <div class="mistoIkony">
+                    <div class="mistoIkona">
+                        <img src="icons/narocnost_2.png"><div class="infoIkonaText">Náročnější trasa</div>
+                    </div>
+                    <div class="mistoIkona">
+                        <img src="icons/vzdalenost.png"><div class="infoIkonaText">183 km dlouhá trasa</div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="mistoButtons">
+                    <button class="button buttonFix" data-func="ulozit">Uložit</button>
+                    <button class="button buttonFix" data-func="vyhledat_misto">Vyhledat v komunitě</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="widgetBar">
+            <button class="widget" title="Počasí na trase" data-func="misto_pocasi">
+                <img src="icons/pocasi_polojasno.svg">
+                19°C
+            </button>
+            <button class="widget circle" title="Vybavení na trasu" data-func="misto_vybaveni">
+                <img src="icons/triko.svg">
+            </button>
+            <button class="widget" title="Spustit průvodce trasou">
+                  Start 
+                <img src="icons/startSipka.png">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

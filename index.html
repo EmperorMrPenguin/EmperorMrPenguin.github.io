@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="mapa">
+        <div class="mapaFunc">
+        <img src="index_mapa.png" alt="Mapa" draggable="false">
+        <button class="mapClickableLink" data-func="EXAMPLE_TRASA"></button>
+        </div>
+    </div>
+    <script src="mapa.js"></script>
+    <div class="backmap"><img src="index_mapa.png" class="mapImg"></div>
+    <div class="transparent"></div>
+    <div class="ui">
+        <div class="topBox">
+            <button class="topButton" data-func="sekce_ai" title="Inteligentní asistent"><img src="icons/ai.svg" class="topIcon"></button>
+            <div class="searchBar">
+                <input type="text" placeholder="Vyhledat" id="search" class="searchField data_search" data-func="hledani" data-bind="searchBar" autocomplete="off"><img src="icons/search.png" class="searchIcon">
+            </div>
+            <button class="topButton" data-func="sekce_komunita" title="Komunita"><img src="icons/komunita.svg" class="topIcon"></button>
+        </div>
+        <div class="navBar">
+            <div class="innerNavBar">
+                <button class="navButton navSelected" title="Mapa"><img src="icons/mapaIkona.svg" class="navIcon"></button>
+                <button data-func="sekce_vybaveni" class="navButton" title="Doporučené vybavení"><img src="icons/vybaveni.svg" class="navIcon"></button>
+                <button data-func="sekce_ulozeno" class="navButton" title="Uloženo"><img src="icons/ulozeno.svg" class="navIcon"></button>
+                <button data-func="sekce_profil" class="navButton" title="Profil"><img src="icons/profil.svg" class="navIcon"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doporučené vybavení | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Doporučené vybavení</div>
+            <button class="topButton hidden" data-func="" title=""><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <br>
+            <div class="contentText">
+                Seznam doporučených vybavení vybraných naší umělou inteligencí.
+            </div>
+            <br>
+            <div class="vybaveni">
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-STAN.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Outdoor stan</div>
+                    <div class="vybaveni-cena">9 999 Kč</div>
+                    <div class="vybaveni-vyrobce">Tent Shop</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-SPACAK.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Spací pytel 2000</div>
+                    <div class="vybaveni-cena">2 542 Kč</div>
+                    <div class="vybaveni-vyrobce">spi-sladce.url</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-MIKINA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Mikina RUN LADY</div>
+                    <div class="vybaveni-cena SLEVA"><b>-30%</b> 805 Kč</div>
+                    <div class="vybaveni-vyrobce">Obleceni.url</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-ZIDLE.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Kempingová židle CAMPCHAIR</div>
+                    <div class="vybaveni-cena">349 Kč</div>
+                    <div class="vybaveni-vyrobce">Svět Židlí</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-BOTY.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Boty AVIVAZ</div>
+                    <div class="vybaveni-cena">1 969 Kč</div>
+                    <div class="vybaveni-vyrobce">Luxusní boty</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-STAN.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Outdoor Stan MULTI</div>
+                    <div class="vybaveni-cena SLEVA"><b>-40%</b> 5 599 Kč</div>
+                    <div class="vybaveni-vyrobce">Tetn shop</div>
+                </button>
+            </div>
+            <div class="EMPTY"></div>
+        </div>
+
+        <div class="widgetBar">
+            <button class="widget" title="Počasí na trase" data-func="misto_pocasi">
+                <img src="icons/pocasi_polojasno.svg">
+                19°C
+            </button>
+            <button class="widget circle wSelected" title="Vybavení na trasu" data-func="back">
+                <img src="icons/triko.svg">
+            </button>
+            <button class="widget" title="Spustit průvodce trasou">
+                  Start 
+                <img src="icons/startSipka.png">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doporučené vybavení | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="index" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Doporučené vybavení</div>
+            <button class="topButton hidden" data-func="" title=""><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <br>
+            <div class="category-button-bar">
+                <input type="radio" name="sort" data-func="vybaveni_doporuceno" value="vse" class="disabled buttonBase" id="vse" checked><label for="vse" class="button">Doporučeno</label>
+                <input type="radio" name="sort" data-func="vybaveni_oblibene" value="posledni" class="disabled buttonBase" id="posledni"><label for="posledni" class="button">Oblíbené</label>
+                <input type="radio" name="sort" data-func="vybaveni_ulozeno" value="ulozeno" class="disabled buttonBase" id="ulozeno"><label for="ulozeno" class="button">Uloženo</label>
+            </div>
+            <br>
+            <div class="vybaveni">
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-STAN.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Outdoor stan</div>
+                    <div class="vybaveni-cena">9 999 Kč</div>
+                    <div class="vybaveni-vyrobce">Tent Shop</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-SPACAK.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Spací pytel 2000</div>
+                    <div class="vybaveni-cena">2 542 Kč</div>
+                    <div class="vybaveni-vyrobce">spi-sladce.url</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-MIKINA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Mikina RUN LADY</div>
+                    <div class="vybaveni-cena SLEVA"><b>-30%</b> 805 Kč</div>
+                    <div class="vybaveni-vyrobce">Obleceni.url</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-ZIDLE.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Kempingová židle CAMPCHAIR</div>
+                    <div class="vybaveni-cena">349 Kč</div>
+                    <div class="vybaveni-vyrobce">Svět Židlí</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-BOTY.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Boty AVIVAZ</div>
+                    <div class="vybaveni-cena">1 969 Kč</div>
+                    <div class="vybaveni-vyrobce">Luxusní boty</div>
+                </button>
+
+                <button class="vybaveni-box">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-STAN.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Outdoor Stan MULTI</div>
+                    <div class="vybaveni-cena SLEVA"><b>-40%</b> 5 599 Kč</div>
+                    <div class="vybaveni-vyrobce">Tetn shop</div>
+                </button>
+            </div>
+            <div class="EMPTY"></div>
+        </div>
+
+        <div class="navBar">
+            <div class="innerNavBar">
+                <button data-func="index" class="navButton" title="Mapa"><img src="icons/mapaIkona.svg" class="navIcon"></button>
+                <button class="navButton navSelected" title="Doporučené vybavení"><img src="icons/vybaveni.svg" class="navIcon"></button>
+                <button data-func="sekce_ulozeno" class="navButton" title="Uloženo"><img src="icons/ulozeno.svg" class="navIcon"></button>
+                <button data-func="sekce_profil" class="navButton" title="Profil"><img src="icons/profil.svg" class="navIcon"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

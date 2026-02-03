@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plánování trasy | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Plánování trasy</div>
+            <button class="topButton hidden" data-func="" title="Zobrazit na mapě"><img src="icons/mapaIkona.svg" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <div class="planovacBody">
+                <div class="Zastavka">
+                    <img src="icons/pointer_green.svg">
+                    <div class="tfGroup">
+                        <input type="text" class="textField" placeholder="Start">
+                        <button class="dragger" data-func="zastavka_dragger"><img src="icons/dragger.png"></button>
+                    </div>
+                    <button class="zastavkaRemove"><img src="icons/remove.svg"></button>
+                </div>
+                <div class="Zastavka ZastavkaUnused">
+                    <img src="icons/pointer_gray.svg">
+                    <div class="tfGroup">
+                        <input type="text" class="textField" placeholder="Přidat zastávku">
+                        <button class="dragger hidden" data-func="zastavka_dragger"><img src="icons/dragger.png"></button>
+                    </div>
+                    <button class="zastavkaRemove hidden"><img src="icons/remove.svg"></button>
+                </div>
+                <div class="Zastavka">
+                    <img src="icons/pointer_green.svg">
+                    <div class="tfGroup">
+                        <input type="text" class="textField" placeholder="Cíl">
+                        <button class="dragger" data-func="zastavka_dragger"><img src="icons/dragger.png"></button>
+                    </div>
+                    <button class="zastavkaRemove"><img src="icons/remove.svg"></button>
+                </div>
+            </div>
+            <br>
+            <div class="mistoButtons">
+                    <button class="button buttonFix" data-func="ulozit">Uložit</button>
+                    <button class="button buttonFix" data-func="vyhledat_misto">Vyhledat v komunitě</button>
+            </div>
+            <br>
+            <div class="line"></div>
+
+            <button class="info-box info-box-button" data-func="misto_info">
+                <div class="ib-placePhotoGroup"><div class="ib-placeName">Ještěd</div>
+                <img src="icons/Ještěd.jpg" class="ib-placePhoto"></div>
+                <div class="ib-placeInfo">Hora s unikátním televizním vysílačem a hotelem.</div>
+                <div class="ib-bottomPart">
+                <br><br>
+                <div class="ib-more">
+                <div class="ib-length">183 km</div>
+                <img src="icons/narocnost_2.png" class="ib-narocnost"></div>
+                </div>
+            </button>
+        </div>
+
+        <div class="widgetBar">
+            <button class="widget" title="Počasí na trase" data-func="misto_pocasi">
+                <img src="icons/pocasi_polojasno.svg">
+                25°C
+            </button>
+            <button class="widget circle" title="Vybavení na trasu" data-func="misto_vybaveni">
+                <img src="icons/triko.svg">
+            </button>
+            <button class="widget" title="Spustit průvodce trasou">
+                  Start 
+                <img src="icons/startSipka.png">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

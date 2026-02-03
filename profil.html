@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="index" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Můj profil</div>
+            <button class="topButton" data-func="nastaveni" title="Nastavení"><img src="icons/nastaveni.svg" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <div class="user-box">
+                <img src="icons/EXAMPLE.jpg" class="userIcon">
+                <div class="userContent">
+                    <div class="userName"><span data-bind='func:getUserInfo("name")'></span></div>
+                    <div class="userText">Ušel celkem <span data-bind='func:getUserInfo("vzdalenost")'></span> km, <br>uskutečnil <span data-bind='func:getUserInfo("pocetVyletu")'></span> výletů.</div>
+                </div>
+            </div>
+            <br>
+            <div class="buttonBar">
+                <div class="button" data-func="odhlasitse">Odhlásit se</div>
+                <div class="button" data-func="nastaveni_profil">Spravovat profil</div>
+            </div>
+            <br>
+            <div class="quickBar">
+                <button class="largeButton" data-func="sekce_statistiky">
+                    <div class="lbIcon">
+                        <img src="icons/stats.svg" class="lbIconPhoto">
+                    </div>
+                    <div class="lbText">
+                        Statistiky
+                    </div>
+                </button>
+                <button class="largeButton" data-func="sekce_aktivita">
+                    <div class="lbIcon">
+                        <img src="icons/hashtag.svg" class="lbIconPhoto">
+                    </div>
+                    <div class="lbText">
+                        Vaše aktivita
+                    </div>
+                </button>
+                <button class="largeButton" data-func="sekce_ai" title="Nikdo nevíme, co dělá">
+                    <div class="lbIcon">
+                        <img src="icons/ai.svg" class="lbIconPhoto">
+                    </div>
+                    <div class="lbText">
+                        AI Asistent
+                    </div>
+                </button>
+                <button class="largeButton" data-func="sekce_feedback">
+                    <div class="lbIcon">
+                        <img src="icons/feedback.svg" class="lbIconPhoto">
+                    </div>
+                    <div class="lbText">
+                        Zpětná Vazba
+                    </div>
+                </button>
+                <button class="largeButton" data-func="sos">
+                    <div class="lbIcon important">
+                        <img src="icons/danger.svg" class="lbIconPhoto">
+                    </div>
+                    <div class="lbText">
+                        SOS
+                    </div>
+                </button>
+                <button class="largeButton" data-func="rezimOffline">
+                    <div class="lbIcon">
+                        <img src="icons/offline.png" class="lbIconPhoto">
+                    </div>
+                    <div class="lbText">
+                        Režim Offline
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="navBar">
+            <div class="innerNavBar">
+                <button data-func="index" class="navButton" title="Mapa"><img src="icons/mapaIkona.svg" class="navIcon"></button>
+                <button data-func="sekce_vybaveni" class="navButton" title="Doporučené vybavení"><img src="icons/vybaveni.svg" class="navIcon"></button>
+                <button data-func="sekce_ulozeno" class="navButton" title="Uloženo"><img src="icons/ulozeno.svg" class="navIcon"></button>
+                <button class="navButton navSelected" title="Profil"><img src="icons/profil.svg" class="navIcon"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

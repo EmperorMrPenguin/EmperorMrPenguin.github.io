@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uloženo | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="index" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Uloženo</div>
+            <button class="topButton hidden" title=""><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="content">
+            <br>
+            <div class="category-button-bar">
+                <input type="radio" name="sort" data-func="ulozeno_sort" value="vse" class="disabled buttonBase" id="vse" checked><label for="vse" class="button">Vše</label>
+                <input type="radio" name="sort" data-func="ulozeno_sort" value="posledni" class="disabled buttonBase" id="posledni"><label for="posledni" class="button">Poslední</label>
+                <input type="radio" name="sort" data-func="ulozeno_sort" value="ulozeno" class="disabled buttonBase" id="ulozeno"><label for="ulozeno" class="button">Uloženo</label>
+            </div>
+            <br>
+            <button class="info-box info-box-button" data-func="misto_info">
+                <div class="ib-placePhotoGroup"><div class="ib-placeName">Ještěd</div>
+                <img src="icons/Ještěd.jpg" class="ib-placePhoto"></div>
+                <div class="ib-placeInfo">Hora s unikátním televizním vysílačem a hotelem.</div>
+                <div class="ib-bottomPart">
+                <br><br>
+                <div class="ib-more">
+                <div class="ib-length">183 km</div>
+                <img src="icons/narocnost_2.png" class="ib-narocnost"></div>
+                </div>
+            </button>
+            <br>
+            <button class="info-box info-box-button" data-func="misto_info">
+                <div class="ib-placePhotoGroup"><div class="ib-placeName">Krkonoše</div>
+                <img src="icons/Krkonoše.jpg" class="ib-placePhoto"></div>
+                <div class="ib-placeInfo">Nachází se zde nejvyšší hora ČR.</div>
+                <div class="ib-bottomPart">
+                <br><br>
+                <div class="ib-more">
+                <div class="ib-length">224 km</div>
+                <img src="icons/narocnost_3.png" class="ib-narocnost"></div>
+                </div>
+            </button>
+
+            <div class="EMPTY"></div>
+        </div>
+
+        <div class="navBar">
+            <div class="innerNavBar">
+                <button data-func="index" class="navButton" title="Mapa"><img src="icons/mapaIkona.svg" class="navIcon"></button>
+                <button data-func="sekce_vybaveni" class="navButton" title="Doporučené vybavení"><img src="icons/vybaveni.svg" class="navIcon"></button>
+                <button class="navButton navSelected" title="Uloženo"><img src="icons/ulozeno.svg" class="navIcon"></button>
+                <button data-func="sekce_profil" class="navButton" title="Profil"><img src="icons/profil.svg" class="navIcon"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
