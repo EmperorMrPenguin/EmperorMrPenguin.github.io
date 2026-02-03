@@ -8,7 +8,7 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="backmap"><img src="icons/background.jpg" class="mapImg"></div>
     <div class="ui">
 
         <div class="topBox">
@@ -19,14 +19,34 @@
 
         <div class="content">
             <br>
+            <!-- Scroll button right <button class="scrollButtonRight" data-func="scroll_right('category-button-bar')">></button>  -->
             <div class="category-button-bar">
                 <input type="radio" name="sort" data-func="vybaveni_doporuceno" value="vse" class="disabled buttonBase" id="vse" checked><label for="vse" class="button">Doporučeno</label>
-                <input type="radio" name="sort" data-func="vybaveni_oblibene" value="posledni" class="disabled buttonBase" id="posledni"><label for="posledni" class="button">Oblíbené</label>
                 <input type="radio" name="sort" data-func="vybaveni_ulozeno" value="ulozeno" class="disabled buttonBase" id="ulozeno"><label for="ulozeno" class="button">Uloženo</label>
+                <input type="radio" name="sort" data-func="kategorie_obleceni" value="kategorie_obleceni" class="disabled buttonBase" id="kategorie_obleceni">
+                <label for="kategorie_obleceni" class="button">👕 Oblečení</label>
+
+                <input type="radio" name="sort" data-func="kategorie_camping" value="kategorie_camping" class="disabled buttonBase" id="kategorie_camping">
+                <label for="kategorie_camping" class="button">⛺ Kemping</label>
+
+                <input type="radio" name="sort" data-func="kategorie_nastroje" value="kategorie_nastroje" class="disabled buttonBase" id="kategorie_nastroje">
+                <label for="kategorie_nastroje" class="button">🛠️ Nástroje</label>
+
+                <input type="radio" name="sort" data-func="kategorie_obuv" value="kategorie_obuv" class="disabled buttonBase" id="kategorie_obuv">
+                <label for="kategorie_obuv" class="button">👟 Obuv</label>
+
+                <input type="radio" name="sort" data-func="kategorie_batohy" value="kategorie_batohy" class="disabled buttonBase" id="kategorie_batohy">
+                <label for="kategorie_batohy" class="button">🎒 Batohy</label>
+
+                <input type="radio" name="sort" data-func="kategorie_potraviny" value="kategorie_potraviny" class="disabled buttonBase" id="kategorie_potraviny">
+                <label for="kategorie_potraviny" class="button">🍎 Potraviny</label>
+
+                <input type="radio" name="sort" data-func="kategorie_ostatní" value="kategorie_ostatní" class="disabled buttonBase" id="kategorie_ostatní">
+                <label for="kategorie_ostatní" class="button">Ostatní</label>
             </div>
             <br>
             <div class="vybaveni">
-                <button class="vybaveni-box">
+                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-STAN.jpg">
                     </div>
@@ -35,7 +55,7 @@
                     <div class="vybaveni-vyrobce">Tent Shop</div>
                 </button>
 
-                <button class="vybaveni-box">
+                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-SPACAK.jpg">
                     </div>
@@ -44,7 +64,7 @@
                     <div class="vybaveni-vyrobce">spi-sladce.url</div>
                 </button>
 
-                <button class="vybaveni-box">
+                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-MIKINA.jpg">
                     </div>
@@ -53,7 +73,7 @@
                     <div class="vybaveni-vyrobce">Obleceni.url</div>
                 </button>
 
-                <button class="vybaveni-box">
+                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-ZIDLE.jpg">
                     </div>
@@ -62,7 +82,7 @@
                     <div class="vybaveni-vyrobce">Svět Židlí</div>
                 </button>
 
-                <button class="vybaveni-box">
+                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-BOTY.jpg">
                     </div>
@@ -71,7 +91,7 @@
                     <div class="vybaveni-vyrobce">Luxusní boty</div>
                 </button>
 
-                <button class="vybaveni-box">
+                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-STAN.jpg">
                     </div>

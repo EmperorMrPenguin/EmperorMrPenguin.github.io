@@ -8,7 +8,7 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="backmap"><img src="icons/background.jpg" class="mapImg"></div>
     <div class="ui">
 
         <div class="topBox">
@@ -22,7 +22,7 @@
                 <div class="Zastavka">
                     <img src="icons/pointer_green.svg">
                     <div class="tfGroup">
-                        <input type="text" class="textField" placeholder="Start">
+                        <input type="text" class="textField" placeholder="Start"> <!-- NÁPAD: Nechte prázdné pro výběr vlastní polohy -->
                         <button class="dragger" data-func="zastavka_dragger"><img src="icons/dragger.png"></button>
                     </div>
                     <button class="zastavkaRemove"><img src="icons/remove.svg"></button>
@@ -38,7 +38,7 @@
                 <div class="Zastavka">
                     <img src="icons/pointer_green.svg">
                     <div class="tfGroup">
-                        <input type="text" class="textField" placeholder="Cíl">
+                        <input type="text" class="textField" placeholder="Cíl" data-bind="searchBar">
                         <button class="dragger" data-func="zastavka_dragger"><img src="icons/dragger.png"></button>
                     </div>
                     <button class="zastavkaRemove"><img src="icons/remove.svg"></button>

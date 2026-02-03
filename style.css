@@ -9,7 +9,7 @@
     --color-text: 101, 101, 101;
     --color-text-darker: 40, 40, 40;
     --preset-bg: linear-gradient(to top, rgba(var(--color-white), 1), rgba(var(--color-green1), 0.7));
-    --preset-bg2: linear-gradient(to top, rgba(var(--color-white), 1), rgba(var(--color-green1), 1), rgba(var(--color-green1), 0.9));
+    --preset-bg2: linear-gradient(to top, rgba(var(--color-green1), 1) 10%, rgba(var(--color-white), 1) 20%, rgba(var(--color-white), 1) 75%, rgba(var(--color-green1), 0.9)) 90%;
     --preset-photoBg: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 50, 0, 0.7));
     --preset-navBg: linear-gradient(to bottom, rgba(var(--color-white), 0.6), rgba(var(--color-green1), 0.5));
     --preset-navBg2: linear-gradient(to bottom, rgba(var(--color-white), 0.9), rgba(var(--color-green1), 0.8));
@@ -78,7 +78,7 @@ body:hover {
 .mapClickableLink {
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     width: 20px;
     height: 20px;
 }
@@ -136,7 +136,7 @@ body:hover {
     border-radius: 100px;
     border: none;
     background: var(--preset-button-normal);
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     transition: all 0.3s;
 }
 .navButton:hover { transform: scale(1.1); }
@@ -192,7 +192,7 @@ body:hover {
     line-height: var(--size-button-normal);
     color: rgba(var(--color-text), 1);
     transition: all 0.3s;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
 }
 .topButton:hover { transform: scale(1.1); }
 .topButton:active { transform: scale(0.95); filter:brightness(85%);}
@@ -206,7 +206,7 @@ body:hover {
     background: var(--preset-navBg2);
     font-size: 23px;
     transform: all 0.2s;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     color: rgba(var(--color-text), 1);
 }
 .searchField2 {
@@ -218,7 +218,7 @@ body:hover {
     background: var(--preset-navBg);
     font-size: 23px;
     transition: all 0.2s;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     color: rgba(var(--color-text), 1);
 }
 .searchField2:focus { 
@@ -265,6 +265,7 @@ body:hover {
 
 .content {
     position: fixed;
+    background-attachment: fixed;
     top: 90px;
     width: min(100vw, 460px);
     border-radius: 35px 35px 0 0;
@@ -277,16 +278,21 @@ body:hover {
     left: 50%;
     transform: translateX(-50%);
     gap: 10px;
+    scroll-padding: 80px;
 }
 
 .content-full {
     top: 0;
-    height: 100vh;
+    gap: 0;
+    min-height: 100vh;
     border-radius: 0;
     z-index: -1;
-    overflow-y: hidden;
+    overflow-y: auto;
+    scroll-padding: 100px;
+    background: var(--preset-bg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
-
 .info-box {
     position: relative;
     display: block;
@@ -378,7 +384,7 @@ body:hover {
 }
 
 .info-box-button {
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     transition: all 0.3s;
 }
 .info-box-button:hover { transform: translateX(-50%) scale(1.02); }
@@ -390,9 +396,16 @@ body:hover {
 
 .category-button-bar {
     position: relative;
-    width: 400px;
+    display: flex;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 8px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding: 20px;
 }
 
 .button {
@@ -408,8 +421,9 @@ body:hover {
     text-align: center;
     color: rgba(var(--color-text-darker), 1);
     transition: all 0.2s;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     position: relative;
+    white-space: nowrap;
 }
 .buttonFix {
     border: var(--size-outline) solid var(--preset-button-outline);
@@ -426,6 +440,13 @@ body:hover {
 .buttonBase:checked + .button {
     background: var(--preset-button-selected2);
     color: white;
+}
+.button img {
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 .selected {
     background: var(--preset-button-selected2);
@@ -504,7 +525,7 @@ body:hover {
     text-align: center;
     color: rgba(var(--color-text), 1);
     transition: all 0.3s;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     position: relative;
 }
 .lbText {
@@ -598,13 +619,18 @@ body:hover {
     top: 200px;
     width: 100%;
     border-radius: 35px 35px 0 0;
-    height: calc(100vh - 200px);
     background: var(--preset-bg2);
+    background-attachment: fixed;
     padding: 20px;
     justify-content: center;
     left: 50%;
     transform: translateX(-50%);
     gap: 10px;
+}
+.produktContent {
+    top: -20px;
+    height: 100%;
+    background: none;
 }
 .mistoNazev {
     font-size: 40px;
@@ -644,10 +670,31 @@ body:hover {
     color: rgba(var(--color-text), 1);
     font-size: 18px;
 }
+.mistoFotky {
+    position: relative;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 10px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.mistoFotky img {
+    max-width: 90%;
+    border-radius: 15px;
+    max-height: 300px;
+    border: var(--size-outline) solid var(--preset-button-outline);
+}
 .mistoButtons {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    overflow-y: hidden;
 }
 
 .widgetBar {
@@ -662,7 +709,7 @@ body:hover {
 .widget {
     background: var(--preset-button-selected);
     border: none;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -759,7 +806,7 @@ body:hover {
 .zastavkaRemove {
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     transition: all 0.2s;
 }
 .zastavkaRemove:hover {
@@ -786,7 +833,7 @@ body:hover {
     font-size: 18px;
     border: var(--size-outline) solid var(--preset-button-outline);
     transition: all 0.3s;
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     z-index: 1;
 }
 .vybaveni-box:hover {
@@ -1009,7 +1056,7 @@ body:hover {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    cursor: pointer;
+    cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
 }
 .messageSend:hover {
     transform: scale(1.1);
@@ -1017,4 +1064,51 @@ body:hover {
 .messageSend:active {
     transform: scale(0.96);
     filter: brightness(90%);
+}
+
+
+.hodnoceni {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h-libilo {
+    filter: brightness(15%);
+}
+.h-nelibilo {
+    filter: brightness(15%);
+    opacity: 25%;
+}
+.procenta {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(var(--color-text-darker), 1);
+}
+.hodnoceni-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.h-linie {
+    position: relative;
+    width: 100%;
+    background: rgba(var(--color-gray2), 0.9);
+    height: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.h-nadlinka {
+    position: absolute;
+    width: 74%;
+    background: rgba(var(--color-green3), 0.8);
+    height: 20px;
+    border-radius: 20px;
+}
+.produktCena {
+    font-size: 30px;
+    text-align: right;
+}
+
+.VYPALIT {
+    filter: brightness(1000%);
 }

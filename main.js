@@ -135,6 +135,25 @@ const Actions = {
   EXAMPLE_TRASA() {
     open("info_misto.html")
   },
+  EXAMPLE_PRODUKT_INFO() {
+    open("info_produkt.html")
+  },
+  scroll_left(className) {
+    const element = document.querySelector(`.${className}`);
+    if (element) {
+      element.scrollLeft -= 100; // posuv o 100px doleva
+    } else {
+      console.warn(`Třída ${className} nenalezena`);
+    }
+  },
+  scroll_right(className) {
+    const element = document.querySelector(`.${className}`);
+    if (element) {
+      element.scrollLeft += 100; // posuv o 100px doprava
+    } else {
+      console.warn(`Třída ${className} nenalezena`);
+    }
+  },
 };
 
 // Přesměrování na jinou URL s pamětí slovníku
@@ -152,21 +171,36 @@ document.addEventListener("click", e => {
   const el = e.target.closest("[data-func]");
   if (!el) return;
 
-  const funcName = el.dataset.func;
-  const action = Actions[funcName];
+  const funcCall = el.dataset.func;
+  const match = funcCall.match(/^(\w+)\((.*)\)$/);
 
-  if (!action) {
-    console.warn("Funkce není definována:", funcName);
+  // Pokud je ve formátu "funkceName(arg1, arg2)"
+  if (match) {
+    const funcName = match[1];
+    const argsString = match[2];
+    const args = argsString
+      ? argsString.split(",").map(a => a.trim().replace(/^["']|["']$/g, ''))
+      : [];
+
+    if (Actions[funcName]) {
+      Actions[funcName](...args);
+    } else {
+      console.warn("Funkce není definována:", funcName);
+    }
     return;
   }
 
-  // radio button
+  // Fallback na starý formát pro radio buttony
+  const action = Actions[funcCall];
+  if (!action) {
+    console.warn("Funkce není definována:", funcCall);
+    return;
+  }
+
   if (el.tagName === "INPUT" && el.type === "radio") {
-    if (!el.checked) return;          // jen když je vybraný
-    action(el.value);                 // pošle value jako string
-  } 
-  // ostatní prvky (button atd.)
-  else {
+    if (!el.checked) return;
+    action(el.value);
+  } else {
     action();
   }
 });
