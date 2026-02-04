@@ -1,5 +1,20 @@
 {
   "name": "Sherpa 9000",
+  "short_name": "Sherpa",
   "start_url": "/index.html",
-  "display": "fullscreen"
+  "display": "standalone",
+  "background_color": "#8ED973",
+  "theme_color": "#282828",
+  "icons": [
+    {
+      "src": "APP-ICON-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "APP-ICON-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
