@@ -24,32 +24,32 @@
                 Seznam doporučených vybavení vybraných naší umělou inteligencí.
             </div>
             <div class="category-button-bar">
-                <input type="radio" name="sort" data-func="vybaveni_doporuceno" value="vse" class="disabled buttonBase" id="vse" checked><label for="vse" class="button">Doporučeno</label>
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('vse')" value="vse" class="disabled buttonBase" id="vse" checked><label for="vse" class="button">Doporučeno</label>
                 <input type="radio" name="sort" data-func="vybaveni_ulozeno" value="ulozeno" class="disabled buttonBase" id="ulozeno"><label for="ulozeno" class="button">Uloženo</label>
-                <input type="radio" name="sort" data-func="kategorie_obleceni" value="kategorie_obleceni" class="disabled buttonBase" id="kategorie_obleceni">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_obleceni')" value="kategorie_obleceni" class="disabled buttonBase" id="kategorie_obleceni">
                 <label for="kategorie_obleceni" class="button">👕 Oblečení</label>
 
-                <input type="radio" name="sort" data-func="kategorie_camping" value="kategorie_camping" class="disabled buttonBase" id="kategorie_camping">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_kemping')" value="kategorie_camping" class="disabled buttonBase" id="kategorie_camping">
                 <label for="kategorie_camping" class="button">⛺ Kemping</label>
 
-                <input type="radio" name="sort" data-func="kategorie_nastroje" value="kategorie_nastroje" class="disabled buttonBase" id="kategorie_nastroje">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_nastroje')" value="kategorie_nastroje" class="disabled buttonBase" id="kategorie_nastroje">
                 <label for="kategorie_nastroje" class="button">🛠️ Nástroje</label>
 
-                <input type="radio" name="sort" data-func="kategorie_obuv" value="kategorie_obuv" class="disabled buttonBase" id="kategorie_obuv">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_obuv')" value="kategorie_obuv" class="disabled buttonBase" id="kategorie_obuv">
                 <label for="kategorie_obuv" class="button">👟 Obuv</label>
 
-                <input type="radio" name="sort" data-func="kategorie_batohy" value="kategorie_batohy" class="disabled buttonBase" id="kategorie_batohy">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_batohy')" value="kategorie_batohy" class="disabled buttonBase" id="kategorie_batohy">
                 <label for="kategorie_batohy" class="button">🎒 Batohy</label>
 
-                <input type="radio" name="sort" data-func="kategorie_potraviny" value="kategorie_potraviny" class="disabled buttonBase" id="kategorie_potraviny">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_potraviny')" value="kategorie_potraviny" class="disabled buttonBase" id="kategorie_potraviny">
                 <label for="kategorie_potraviny" class="button">🍎 Potraviny</label>
 
-                <input type="radio" name="sort" data-func="kategorie_ostatní" value="kategorie_ostatní" class="disabled buttonBase" id="kategorie_ostatní">
+                <input type="radio" name="sort" data-func="vybaveni_filtruj('kt_ostatni')" value="kategorie_ostatní" class="disabled buttonBase" id="kategorie_ostatní">
                 <label for="kategorie_ostatní" class="button">Ostatní</label>
             </div>
             <br>
             <div class="vybaveni">
-                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-STAN.jpg">
                     </div>
@@ -58,7 +58,7 @@
                     <div class="vybaveni-vyrobce">Tent Shop</div>
                 </button>
 
-                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-SPACAK.jpg">
                     </div>
@@ -67,7 +67,7 @@
                     <div class="vybaveni-vyrobce">spi-sladce.url</div>
                 </button>
 
-                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
+                <button class="vybaveni-box kt_obleceni" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-MIKINA.jpg">
                     </div>
@@ -76,7 +76,7 @@
                     <div class="vybaveni-vyrobce">Obleceni.url</div>
                 </button>
 
-                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-ZIDLE.jpg">
                     </div>
@@ -85,7 +85,7 @@
                     <div class="vybaveni-vyrobce">Svět Židlí</div>
                 </button>
 
-                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
+                <button class="vybaveni-box kt_obuv" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-BOTY.jpg">
                     </div>
@@ -94,13 +94,175 @@
                     <div class="vybaveni-vyrobce">Luxusní boty</div>
                 </button>
 
-                <button class="vybaveni-box" data-func="EXAMPLE_PRODUKT_INFO">
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
                     <div class="vybaveni-fotka">
                         <img src="icons/EXAMPLE-STAN.jpg">
                     </div>
                     <div class="vybaveni-nazev">Outdoor Stan MULTI</div>
                     <div class="vybaveni-cena SLEVA"><b>-40%</b> 5 599 Kč</div>
                     <div class="vybaveni-vyrobce">Tetn shop</div>
+                </button>
+
+                <button class="vybaveni-box kt_batohy" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TREKOVY_BATOH_35L.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Trekový batoh 35L</div>
+                    <div class="vybaveni-cena">1 969 Kč</div>
+                    <div class="vybaveni-vyrobce">MountainGear</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-KEMPINGOVA_SVITILNA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Kempingová svítilna LED</div>
+                    <div class="vybaveni-cena SLEVA"><b>-25%</b> 699 Kč</div>
+                    <div class="vybaveni-vyrobce">LightPro</div>
+                </button>
+
+                <button class="vybaveni-box kt_boty" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TREKOVE_BOTY_XTREME.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Trekové boty Xtreme</div>
+                    <div class="vybaveni-cena">2 899 Kč</div>
+                    <div class="vybaveni-vyrobce">TrailStep</div>
+                </button>
+
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-SPACI_PYT_COMFORT.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Spací pytel Comfort</div>
+                    <div class="vybaveni-cena SLEVA"><b>-30%</b> 1 399 Kč</div>
+                    <div class="vybaveni-vyrobce">SleepEasy</div>
+                </button>
+
+                <button class="vybaveni-box kt_potraviny" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TERMO_LAHEV.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Termo láhev 1L</div>
+                    <div class="vybaveni-cena">449 Kč</div>
+                    <div class="vybaveni-vyrobce">HydroMax</div>
+                </button>
+
+                <button class="vybaveni-box kt_obleceni" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-PLASTENKA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Outdoor pláštěnka</div>
+                    <div class="vybaveni-cena">329 Kč</div>
+                    <div class="vybaveni-vyrobce">RainShield</div>
+                </button>
+
+                <button class="vybaveni-box kt_obleceni" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TURISTICKA_MIKINA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Turistická mikina</div>
+                    <div class="vybaveni-cena SLEVA"><b>-20%</b> 799 Kč</div>
+                    <div class="vybaveni-vyrobce">NordWear</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-KOMPAS.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Turistický kompas ve tvaru mobilu</div>
+                    <div class="vybaveni-cena">259 Kč</div>
+                    <div class="vybaveni-vyrobce">PathFinder</div>
+                </button>
+
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-KARIMATKA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Pěnová karimatka</div>
+                    <div class="vybaveni-cena">499 Kč</div>
+                    <div class="vybaveni-vyrobce">CampSoft</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-CELOVKA_PRO.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Čelovka PRO</div>
+                    <div class="vybaveni-cena SLEVA"><b>-35%</b> 899 Kč</div>
+                    <div class="vybaveni-vyrobce">NightEye</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TURISTICKY_NUZ.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Švýcarský nůž</div>
+                    <div class="vybaveni-cena">649 Kč</div>
+                    <div class="vybaveni-vyrobce">SharpEdge</div>
+                </button>
+
+                <button class="vybaveni-box kt_obleceni" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-OUTDOOR_PONOZKY.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Outdoor ponožky</div>
+                    <div class="vybaveni-cena">199 Kč</div>
+                    <div class="vybaveni-vyrobce">WarmFeet</div>
+                </button>
+
+                <button class="vybaveni-box kt_obleceni" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TURISTICKA_BUNDA.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Turistická bunda</div>
+                    <div class="vybaveni-cena SLEVA"><b>-45%</b> 2 199 Kč</div>
+                    <div class="vybaveni-vyrobce">WindStop</div>
+                </button>
+
+                <button class="vybaveni-box kt_kemping" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-KEMPINGOVY_VARIČ.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Kempingový vařič</div>
+                    <div class="vybaveni-cena">1 299 Kč</div>
+                    <div class="vybaveni-vyrobce">CookMaster</div>
+                </button>
+
+                <button class="vybaveni-box kt_batohy" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-VODOTESNY_VAK.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Vodotěsný vak</div>
+                    <div class="vybaveni-cena">549 Kč</div>
+                    <div class="vybaveni-vyrobce">DryBag</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-TREKINGOVE_HULKY.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Trekingové hůlky</div>
+                    <div class="vybaveni-cena SLEVA"><b>-15%</b> 999 Kč</div>
+                    <div class="vybaveni-vyrobce">HikePro</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-PRVNI_POMOC.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Lékárnička první pomoci</div>
+                    <div class="vybaveni-cena">379 Kč</div>
+                    <div class="vybaveni-vyrobce">SafeTrip</div>
+                </button>
+
+                <button class="vybaveni-box kt_nastroje" data-func="EXAMPLE_PRODUKT_INFO">
+                    <div class="vybaveni-fotka">
+                        <img src="icons/EXAMPLE-SOLARNI_NABIJEC.jpg">
+                    </div>
+                    <div class="vybaveni-nazev">Solární nabíječka</div>
+                    <div class="vybaveni-cena SLEVA"><b>-50%</b> 1 199 Kč</div>
+                    <div class="vybaveni-vyrobce">SunPower</div>
                 </button>
             </div>
             <div class="EMPTY"></div>

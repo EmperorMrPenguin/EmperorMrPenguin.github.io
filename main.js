@@ -154,7 +154,28 @@ const Actions = {
       console.warn(`Třída ${className} nenalezena`);
     }
   },
+  vybaveni_filtruj(kategorie) {
+    vybaveni_povolene_tridy.forEach(trida => {
+        document.querySelectorAll("." + trida).forEach(el => {
+            if (kategorie === "vse") {
+                el.style.display = "flex";
+            } else {
+                el.style.display = (trida === kategorie) ? "flex" : "none";
+            }
+        });
+    });
+  },
 };
+
+const vybaveni_povolene_tridy = [
+  "kt_obleceni",
+  "kt_kemping",
+  "kt_obuv",
+  "kt_potraviny",
+  "kt_nastroje",
+  "kt_batohy",
+  "kt_ostatni"
+];
 
 // Přesměrování na jinou URL s pamětí slovníku
 function open(url) {
