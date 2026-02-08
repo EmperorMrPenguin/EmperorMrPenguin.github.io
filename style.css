@@ -8,17 +8,30 @@
     --color-gray3: 242, 242, 242;
     --color-text: 101, 101, 101;
     --color-text-darker: 40, 40, 40;
-    --preset-bg: linear-gradient(to top, rgba(var(--color-white), 1), rgba(var(--color-green1), 0.7));
-    --preset-bg2: linear-gradient(to top, rgba(var(--color-green1), 1) 10%, rgba(var(--color-white), 1) 20%, rgba(var(--color-white), 1) 75%, rgba(var(--color-green1), 0.9)) 90%;
+    /* --preset-bg: linear-gradient(to top, rgba(var(--color-white), 1), rgba(var(--color-green1), 0.7));           ORIGINÁL    */
+    --preset-bg: linear-gradient(170deg,
+    rgba(var(--color-white), 0.9),
+    rgba(220, 243, 212, 0.9),
+    rgba(var(--color-gray3), 0.9),
+    rgba(var(--color-gray2), 1)
+    );
+    /* --preset-bg2: linear-gradient(to top, rgba(var(--color-green1), 1) 10%, rgba(var(--color-white), 1) 20%, rgba(var(--color-white), 1) 75%, rgba(var(--color-green1), 0.9)) 90%;      ORIGINÁL*/
+    --preset-bg2: linear-gradient(170deg,
+    rgb(208, 226, 202),
+    rgba(var(--color-white), 1),
+    rgba(var(--color-gray3), 1),
+    rgba(var(--color-gray2), 1)
+    );
     --preset-photoBg: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 50, 0, 0.7));
     --preset-navBg: linear-gradient(to bottom, rgba(var(--color-white), 0.6), rgba(var(--color-green1), 0.5));
     --preset-navBg2: linear-gradient(to bottom, rgba(var(--color-white), 0.9), rgba(var(--color-green1), 0.8));
     --preset-topBg: linear-gradient(to bottom left, rgba(var(--color-white), 0.6), rgba(var(--color-gray2), 0.5));
     --preset-button-outline: rgba(191, 191, 191, 0.8);
     --preset-button-top: linear-gradient(to top right, rgba(var(--color-gray2), 0.6), rgba(var(--color-white), 0.7));
-    --preset-button-normal:  rgba(var(--color-white), 0.6);
+    --preset-button-normal:  rgba(var(--color-white), 0.8);
     --preset-button-selected: linear-gradient(to top right, rgba(var(--color-green1), 0.6), rgba(var(--color-green2), 1));
     --preset-button-selected2: linear-gradient(to bottom, rgba(var(--color-green1), 1), rgba(var(--color-green2), 1));
+    --preset-shadow: 0 4px 8px rgba(0,0,0,0.1);
     --size-button-small: 35px;
     --size-button-normal: 50px;
     --size-button-large: 65px;
@@ -104,6 +117,7 @@ body:hover {
     border: var(--size-outline) solid var(--preset-button-outline);
     background: var(--preset-navBg);
     transition: all 0.5s;
+    box-shadow: var(--preset-shadow);
 }
 .backmap {
     position: fixed;
@@ -303,6 +317,7 @@ body:hover {
     padding: 10px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: var(--preset-shadow);
 }
 
 .ib-topPart {
@@ -721,6 +736,7 @@ body:hover {
     padding-right: 20px;
     gap: 10px;
     transition: all 0.3s;
+    box-shadow: var(--preset-shadow);
 }
 .widget img {
     height: 40px;
@@ -835,6 +851,7 @@ body:hover {
     transition: all 0.3s;
     cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     z-index: 1;
+    box-shadow: var(--preset-shadow);
 }
 .vybaveni-box:hover {
     transform: scale(1.1);
