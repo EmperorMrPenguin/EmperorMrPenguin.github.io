@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
           "photo": "Ještěd.jpg",
           "info": "Ještěd je liberecká dominanta s unikátním televizním vysílačem a hotelem, který získal prestižní architektonickou cenu.",
           "vzdalenost": 22,
-          "pocetVyletu": 15,
+          "detailInfo": "n/a",
+          "popisTrasy": "n/a",
           "statistiky": {}
         },
         "20": {
@@ -54,7 +55,17 @@ document.addEventListener("DOMContentLoaded", () => {
           "photo": "Krkonoše.jpg",
           "info": "Krkonoše jsou nejvyšší české pohoří s národním parkem a Sněžkou, která měří 1603 metrů.",
           "vzdalenost": 3251,
-          "pocetVyletu": 257,
+          "detailInfo": "n/a",
+          "popisTrasy": "n/a",
+          "statistiky": {}
+        },
+        "30": {
+          "name": "Zámek Lednice",
+          "photo": "Ještěd.jpg",
+          "info": "Novogotický státní zámek na seznamu UNESCO.",
+          "vzdalenost": 55,
+          "detailInfo": "n/a",
+          "popisTrasy": "n/a",
           "statistiky": {}
         }
       }
@@ -114,6 +125,9 @@ const Actions = {
   },
   misto_pocasi() {
     open("pocasi_misto.html");
+  },
+  misto_navigace() {
+    open("navigace.html");
   },
   naplanovat() {
     open("planovac.html");

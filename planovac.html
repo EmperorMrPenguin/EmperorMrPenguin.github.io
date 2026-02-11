@@ -48,20 +48,25 @@
             </div>
             <br>
             <div class="mistoButtons">
-                    <button class="button buttonFix" data-func="ulozit">Uložit</button>
-                    <button class="button buttonFix" data-func="vyhledat_misto">Vyhledat v komunitě</button>
+                <!-- <button class="button buttonFix selected" data-func="ulozit" title="Pěšky"><img src="icons/pesky.svg" class="VYPALIT"></button>
+                <button class="button buttonFix" data-func="ulozit" title="Na kole"><img src="icons/nakole.svg"></button> -->
+                <input type="radio" name="typ" data-func="ulozeno_sort" value="pesky" class="disabled buttonBase" id="pesky" checked><label for="pesky" class="button buttonCircle"><img src="icons/pesky.svg" class="typTrasyImg"></label>
+                <input type="radio" name="typ" data-func="ulozeno_sort" value="nakole" class="disabled buttonBase" id="nakole"><label for="nakole" class="button buttonCircle"><img src="icons/nakole.svg" class="typTrasyImg"></label>
+
+                <button class="button buttonFix" data-func="ulozit">Uložit</button>
+                <button class="button buttonFix" data-func="vyhledat_misto">Vyhledat v komunitě</button>
             </div>
             <br>
             <div class="line"></div>
 
             <button class="info-box info-box-button" data-func="misto_info">
-                <div class="ib-placePhotoGroup"><div class="ib-placeName">Ještěd</div>
-                <img src="icons/Ještěd.jpg" class="ib-placePhoto"></div>
-                <div class="ib-placeInfo">Hora s unikátním televizním vysílačem a hotelem.</div>
+                <div class="ib-placePhotoGroup"><div class="ib-placeName">Zámek Lednice</div>
+                <img src="icons/Lednice.jpg" class="ib-placePhoto"></div>
+                <div class="ib-placeInfo">Novogotický státní zámek na seznamu UNESCO.</div>
                 <div class="ib-bottomPart">
                 <br><br>
                 <div class="ib-more">
-                <div class="ib-length">183 km</div>
+                <div class="ib-length">55 km</div>
                 <img src="icons/narocnost_2.png" class="ib-narocnost"></div>
                 </div>
             </button>
@@ -75,7 +80,7 @@
             <button class="widget circle" title="Vybavení na trasu" data-func="misto_vybaveni">
                 <img src="icons/triko.svg">
             </button>
-            <button class="widget" title="Spustit průvodce trasou">
+            <button class="widget" title="Spustit průvodce trasou" data-func="misto_navigace">
                   Start 
                 <img src="icons/startSipka.png">
             </button>

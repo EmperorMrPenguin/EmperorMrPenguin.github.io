@@ -39,7 +39,7 @@
     --size-outline: 2px;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -47,6 +47,10 @@ body {
 }
 body:hover {
     cursor: default !important; /* DELETE! */
+}
+
+body, button, input, select, textarea {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .ui {
@@ -84,8 +88,8 @@ body:hover {
 
 .mapaFunc .mapClickableLink {
     position: absolute;
-    top: 221px;           /* odsazení od horního okraje obrázku */
-    right: 239px;          /* odsazení od levého okraje obrázku */
+    top: 422px;           /* odsazení od horního okraje obrázku */
+    right: 288px;          /* odsazení od levého okraje obrázku */
 }
 
 .mapClickableLink {
@@ -424,7 +428,6 @@ body:hover {
 }
 
 .button {
-    border: none;
     height: var(--size-button-small);
     line-height: calc(var(--size-button-small));
     border-radius: 50px;
@@ -439,10 +442,13 @@ body:hover {
     cursor: default; /* V DESKTOPOVE VERZI NAHRADIT POINTEREM! */
     position: relative;
     white-space: nowrap;
+    border: var(--size-outline) solid var(--preset-button-outline);
 }
 .buttonFix {
-    border: var(--size-outline) solid var(--preset-button-outline);
     line-height: calc(var(--size-button-small)/3);
+}
+.buttonCircle {
+    aspect-ratio: 1 / 1;
 }
 .button:hover {
     filter: brightness(95%);
@@ -455,6 +461,9 @@ body:hover {
 .buttonBase:checked + .button {
     background: var(--preset-button-selected2);
     color: white;
+}
+.buttonBase:checked + .button img {
+    filter: brightness(1000%);
 }
 .button img {
     height: 90%;
@@ -478,9 +487,6 @@ body:hover {
     left: 50%;
     transform: translateX(-50%);
     gap: 20px;
-}
-.user-box-button-fix {
-    line-height: calc(var(--size-button-small)/2);
 }
 .userIcon {
     grid-column: 1;
@@ -710,6 +716,8 @@ body:hover {
     overflow-x: auto;
     scrollbar-width: none;
     overflow-y: hidden;
+    align-items: center;
+    padding: 5px;
 }
 
 .widgetBar {
@@ -1128,4 +1136,63 @@ body:hover {
 
 .VYPALIT {
     filter: brightness(1000%);
+}
+
+.nav-photo {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+.nav-photo img {
+    position: fixed;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+}
+
+.nav-box {
+    gap: 30px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--preset-bg);
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: var(--preset-shadow);
+    border: var(--size-outline) solid var(--preset-button-outline);
+    width: 400px;
+    bottom: 50px;
+}
+.nav-box .part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(var(--color-text-darker), 1);
+    font-size: 25px;
+}
+.nav-box .part img {
+    height: 100px;
+}
+.nav-widgets {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    height: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-widgets .widget img {
+    height: 40px;
 }

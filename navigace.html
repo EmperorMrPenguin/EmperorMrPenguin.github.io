@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Průvodce trasou | Sherpa 9000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="APP-ICON-OG.png" type="image/png">
+</head>
+<body>
+    <div class="backmap"><img src="mapa.png" class="mapImg"></div>
+    <div class="ui">
+
+        <div class="topBox">
+            <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
+            <div class="topTitle">Zámek Lednice</div>
+            <button class="topButton hidden" data-func="" title=""><img src="" class="topIcon"></button>
+        </div>
+
+        <div class="nav-photo">
+            <img src="icons/EXAMPLE-NAVIGACE.jpg">
+        </div>
+        <div class="nav-box">
+            <div class="part">
+                <img src="icons/nav-vpred.png">
+                Jděte 1,5 km vpřed a potom odbočte doleva.
+            </div>
+            <div class="part">
+                <div class="nav-widgets">
+                    <button class="widget" title="Počasí" data-func="misto_pocasi">
+                        <img src="icons/pocasi_polojasno.svg">
+                        19°C
+                    </button>
+                    <button class="widget circle" title="Poznámky" data-func="nav_poznamky">
+                        <img src="icons/danger.svg">
+                    </button>
+                    <button class="widget circle" title="Pozastavit" data-func="nav_pozastavit">
+                        <img src="icons/pause.svg">
+                    </button>
+                    <button class="widget circle" title="Další instrukce" data-func="nav_mapa">
+                        <img src="icons/mapaIkona.svg" class="VYPALIT">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+// kvuli tomu, aby chrome uznal naši aplikaci jako nainstalovatelnou aplikaci
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => console.log('SW registered'))
+    .catch(err => console.log('SW error', err));
+}
+</script>
+</body>
+</html>
