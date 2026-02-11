@@ -179,6 +179,12 @@ const Actions = {
         });
     });
   },
+  nav_mapa() {
+    const mapaTog = document.querySelector('.togglemap');
+    mapaTog.classList.toggle('disabled');
+    const imgTog = document.querySelector('.togglephoto');
+    imgTog.classList.toggle('disabled');
+  },
 };
 
 const vybaveni_povolene_tridy = [
