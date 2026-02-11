@@ -180,11 +180,20 @@ const Actions = {
     });
   },
   nav_mapa() {
-    const mapaTog = document.querySelector('.togglemap');
-    mapaTog.classList.toggle('disabled');
-    const imgTog = document.querySelector('.togglephoto');
-    imgTog.classList.toggle('disabled');
+    document.querySelectorAll('.toggleMap').forEach(el => {
+      el.classList.toggle('disabled');
+    });
   },
+  nav_poznamky() {
+    document.querySelectorAll('.nav_poznamky').forEach(el => {
+      el.classList.toggle('disabled');
+    });
+  },
+  nav_pozastavit() {
+    document.querySelectorAll('.togglePauseVisual').forEach(el => {
+      el.classList.toggle('disabled');
+    });
+  }
 };
 
 const vybaveni_povolene_tridy = [

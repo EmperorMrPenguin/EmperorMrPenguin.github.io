@@ -12,7 +12,7 @@
 <body>
     <div class="backmap"><img src="mapa.png" class="mapImg"></div>
     <div class="ui">
-        <div class="mapa togglemap disabled">
+        <div class="mapa toggleMap disabled">
             <div class="mapaFunc">
                 <img src="icons/trasa-full-mapa.png" alt="Mapa" draggable="false">
             </div>
@@ -21,16 +21,31 @@
         <div class="topBox">
             <button class="topButton" data-func="back" title="Zpět"><img src="icons/back.png" class="topIcon"></button>
             <div class="topTitle">Zámek Lednice</div>
-            <button class="topButton hidden" data-func="" title=""><img src="" class="topIcon"></button>
+            <button class="topButton" data-func="sos" title="Stav Nouze"><img src="icons/danger-gray.svg" class="topIcon"></button>
         </div>
 
         <div class="nav-photo">
-            <img src="icons/EXAMPLE-NAVIGACE.jpg" class="togglephoto">
+            <img src="icons/EXAMPLE-NAVIGACE.jpg" class="toggleMap">
         </div>
         <div class="nav-box">
-            <div class="part">
+            <div class="part nav_poznamky">
                 <img src="icons/nav-vpred.png">
                 Jděte 1,5 km vpřed a potom odbočte doleva.
+            </div>
+            <div class="part nav_poznamky disabled">
+                <img src="icons/danger-gray.svg">
+                Nehoda přibližně 8 km daleko. Dbejte na zvýšenou opatrnost!
+            </div>
+            <div class="part nav_poznamky disabled">
+                <img src="icons/komunita.svg">
+                Uživatelé hlásí, že na aktuálním úseku není stinné místo.
+            </div>
+            <div class="part nav_poznamky disabled">
+                <img src="icons/pocasi_dest.svg" class="ZTMAVIT">
+                Přibližně v 14:57 očekávejte rychlou přeháňku.
+            </div>
+            <div class="part-pause togglePauseVisual disabled">
+                <img src="icons/pause.svg">Pozastaveno
             </div>
             <div class="part">
                 <div class="nav-widgets">
@@ -38,14 +53,23 @@
                         <img src="icons/pocasi_polojasno.svg">
                         19°C
                     </button>
-                    <button class="widget circle" title="Poznámky" data-func="nav_poznamky">
-                        <img src="icons/danger.svg">
+                    <button class="widget circle nav_poznamky" title="Poznámky" data-func="nav_poznamky">
+                        <img src="icons/menu.svg">
                     </button>
-                    <button class="widget circle" title="Pozastavit" data-func="nav_pozastavit">
+                    <button class="widget circle wSelected nav_poznamky disabled" title="Skrýt poznámky" data-func="nav_poznamky">
+                        <img src="icons/menu.svg">
+                    </button>
+                    <button class="widget circle togglePauseVisual" title="Pozastavit" data-func="nav_pozastavit">
                         <img src="icons/pause.svg">
                     </button>
-                    <button class="widget circle" title="Přepnout zobrazení" data-func="nav_mapa">
-                        <img src="icons/mapaIkona.svg" class="VYPALIT">
+                    <button class="widget circle togglePauseVisual disabled" title="Pokračovat" data-func="nav_pozastavit">
+                        <img src="icons/resume.svg">
+                    </button>
+                    <button class="widget circle toggleMap" title="Zobrazit mapu" data-func="nav_mapa">
+                        <img src="icons/pointer-white.svg">
+                    </button>
+                    <button class="widget circle wSelected toggleMap disabled" title="Zobrazit fotografie" data-func="nav_mapa">
+                        <img src="icons/pointer-white.svg">
                     </button>
                 </div>
             </div>
