@@ -12,7 +12,7 @@
 <body>
     <div class="backmap"><img src="icons/background.jpg" class="mapImg"></div>
     <div class="ui">
-        <div class="mapa toggleMap disabled">
+        <div class="mapa toggleMap">
             <div class="mapaFunc">
                 <img src="icons/trasa-full-mapa.png" alt="Mapa" draggable="false">
             </div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="nav-photo">
-            <img src="icons/EXAMPLE-NAVIGACE.jpg" class="toggleMap">
+            <img src="icons/EXAMPLE-NAVIGACE.jpg" class="toggleMap disabled">
         </div>
         <div class="nav-box">
             <div class="part nav_poznamky">
@@ -41,8 +41,14 @@
                 Uživatelé hlásí, že na aktuálním úseku není stinné místo.
             </div>
             <div class="part nav_poznamky disabled">
-                <img src="icons/pocasi_dest.svg" class="ZTMAVIT">
-                Přibližně v 14:57 očekávejte rychlou přeháňku.
+                <img src="icons/pocasi_snezi.svg" class="ZTMAVIT">
+                Přibližně v 14:57 očekávejte velmi silné sněžení.
+            </div>
+            <div class="part nav-button-bar nav_poznamky disabled">
+                <button class="button btnUdalost udalost_led"><img src="icons/udalost_led.svg"></button>
+                <button class="button btnUdalost udalost_doprava"><img src="icons/udalost_doprava.svg"></button>
+                <button class="button btnUdalost udalost_cesta"><img src="icons/udalost_spatnaCesta.svg"></button>
+                <button class="button buttonFix">Nahlásit jinou událost</button>
             </div>
             <div class="part-pause togglePauseVisual disabled">
                 <img src="icons/pause.svg">Pozastaveno
@@ -50,8 +56,8 @@
             <div class="part">
                 <div class="nav-widgets">
                     <button class="widget" title="Počasí" data-func="misto_pocasi">
-                        <img src="icons/pocasi_polojasno.svg">
-                        19°C
+                        <img src="icons/pocasi_zatazeno.svg">
+                        -6°C
                     </button>
                     <button class="widget circle nav_poznamky" title="Poznámky" data-func="nav_poznamky">
                         <img src="icons/menu.svg">
@@ -65,11 +71,11 @@
                     <button class="widget circle togglePauseVisual disabled" title="Pokračovat" data-func="nav_pozastavit">
                         <img src="icons/resume.svg">
                     </button>
-                    <button class="widget circle toggleMap" title="Zobrazit mapu" data-func="nav_mapa">
-                        <img src="icons/pointer-white.svg">
+                    <button class="widget circle toggleMap" title="Zobrazit fotografie trasy" data-func="nav_mapa">
+                        <img src="icons/foto.svg">
                     </button>
-                    <button class="widget circle wSelected toggleMap disabled" title="Zobrazit fotografie" data-func="nav_mapa">
-                        <img src="icons/pointer-white.svg">
+                    <button class="widget circle wSelected toggleMap disabled" title="Zobrazit mapu" data-func="nav_mapa">
+                        <img src="icons/foto.svg">
                     </button>
                 </div>
             </div>

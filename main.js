@@ -77,6 +77,11 @@ const Actions = {
   index() {
     open("index.html");
   },
+  smazatPamet() {
+    AppState.data = {};
+    localStorage.setItem("Data", JSON.stringify(AppState.data));
+    window.location.reload();
+  },
   cancelSearch() {
     open("index.html");
     AppState.data["searchBar"] = "";
@@ -213,7 +218,7 @@ function open(url) {
 }
 function reload() {
   localStorage.setItem("Data", JSON.stringify(AppState.data));
-  window.location.reload;
+  window.location.reload();
 }
 
 // Globální listener pro všechny elementy s data-func
